@@ -56,7 +56,7 @@ if (startVm(&mJavaVM, &env) != 0) {
 
 可以在JniInvocation.Init函数中看到初始化过程
 
-[![复制代码](images/copycode.gif)](javascript:void(0);)
+
 
 ```
 bool JniInvocation::Init(const char* library) {
