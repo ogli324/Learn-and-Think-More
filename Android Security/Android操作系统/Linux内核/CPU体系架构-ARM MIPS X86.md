@@ -1,4 +1,4 @@
-## CPU体系架构-ARM/MIPS/X86
+## CPU体系架构-ARM MIPS X86
 
 url：https://nieyong.github.io/wiki_cpu/index.html
 

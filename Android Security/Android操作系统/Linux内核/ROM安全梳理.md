@@ -19,7 +19,7 @@ url：http://www.wireghost.cn/2017/01/27/ROM%E5%AE%89%E5%85%A8%E6%A2%B3%E7%90%86
 ## 文件格式
 
 一个完整的ROM线刷包通常会包含以下镜像文件：
-[![ROM镜像文件](images/1.png)](http://www.wireghost.cn/2017/01/27/ROM安全梳理/1.png)
+[![ROM镜像文件](images/1-1618029323414.png)](http://www.wireghost.cn/2017/01/27/ROM安全梳理/1.png)
 
 ### boot.img&&recovery.img
 
@@ -169,7 +169,7 @@ cache.img映像文件的内容如下：
 ## 运行时的挂载顺序
 
 当PC启动的时候，首先执行的是在BIOS上的代码，然后再由BIOS负责将Kernel加载起来执行。在嵌入式世界里，BootLoader的作用就相当于PC的BIOS。手机开机会先进入Bootloader，然后判断是正常启动还是进入recovery，若正常启动则对boot.img解压并将执行权限交给zImage，zImage挂载ramdisk.img执行其中的init进程，init进程进一步挂载system.img、cache.img、userdata.img文件系统镜像。
-[![挂载顺序](images/2.png)](http://www.wireghost.cn/2017/01/27/ROM安全梳理/2.png)
+[![挂载顺序](images/2-1618029323414.png)](http://www.wireghost.cn/2017/01/27/ROM安全梳理/2.png)
 
 ## Android攻击面
 
@@ -322,7 +322,7 @@ USB暴露的攻击面取决于设备支持哪些USB模式（ADB、存储、MTP�
 ### 安全现状
 
 下面我们将结合这两年的安全事件，从案例的角度对ROM安全的当前现状作简单介绍。。
-[![img](images/14.png)](http://www.wireghost.cn/2017/01/27/ROM安全梳理/14.png)
+[![img](images/14-1618029323414.png)](http://www.wireghost.cn/2017/01/27/ROM安全梳理/14.png)
 
 #### 解锁BootLoader
 
@@ -356,7 +356,7 @@ PS：事实上在解锁BootLoader时，会执行一次恢复出厂设置，用�
 传播方式主要是通过植入ROM，利用刷机网站进行传播。到目前为止，恶意样本主要是植入为夏新、联想、小采等手机开发的三方ROM进行传播，受影响用户达10万以上。已知的ROM下载渠道有：
 ROM基地 http://www.romjd.com/Rom/Detail/16229
 ROM之家 http://www.romzj.com/rom/10300.htm
-[![img](images/12.png)](http://www.wireghost.cn/2017/01/27/ROM安全梳理/12.png)[![img](images/13.png)](http://www.wireghost.cn/2017/01/27/ROM安全梳理/13.png)用户手机刷入被感染的ROM后，木马便疯狂地开始推广传播各种应用。
+[![img](images/12-1618029323414.png)](http://www.wireghost.cn/2017/01/27/ROM安全梳理/12.png)[![img](images/13-1618029323415.png)](http://www.wireghost.cn/2017/01/27/ROM安全梳理/13.png)用户手机刷入被感染的ROM后，木马便疯狂地开始推广传播各种应用。
 从后台挖掘出的脚本发现被推广的应用至少有近百个，以下是部分推广软件的包名（包名是Android软件一个标识），可以看到包括UC浏览器、百度浏览器、QQ浏览器、豌豆荚、100tv播放器、百度团购、折800、腾讯新闻等知名应用也在推广的名单内。
 
 ##### 来自中国的秘密：预装木马的安卓平板正在销往全世界
@@ -367,7 +367,7 @@ ROM之家 http://www.romzj.com/rom/10300.htm
 
 通过对收集的信息进行分析，该木马其实已经存在有一段时间了，而其间也有不少受害用户一直在 XDA、TechKnow等网上交流论坛上寻求帮助。
 [![img](images/6.png)](http://www.wireghost.cn/2017/01/27/ROM安全梳理/6.png)而在亚马逊上也发现了一些购买了平板的用户的抱怨。
-[![img](images/7.png)](http://www.wireghost.cn/2017/01/27/ROM安全梳理/7.png)
+[![img](images/7-1618029323415.png)](http://www.wireghost.cn/2017/01/27/ROM安全梳理/7.png)
 
 ###### 恶意行径：Cloudsota木马伸出了恶魔之手
 
@@ -377,7 +377,7 @@ ROM之家 http://www.romzj.com/rom/10300.htm
 ###### 影响：超过153个国家地区的用户受到影响
 
 根据初步的估算，至少有17,233台受感染的平板被线下的用户购买，并已经通过物流交付到用户手中。此外，由于目前许多平板是不受杀毒应用的保护，实际上感染设备的数量可能比我们预计要多得多。
-[![img](images/8.png)](http://www.wireghost.cn/2017/01/27/ROM安全梳理/8.png)其中最令人担心的是，这些平板电脑在许多电商平台都有出售，不乏零售巨头，如亚马逊。从当前的情况来看，显然大多数人都不知道cloudsota的潜在风险和破坏性，而在这里，必须提醒广大用户，可以说，这是一个定时炸弹，随时都有可能威胁个人隐私和财产安全。根据跟踪研究发现，目前有超过30个品牌的平板被预装了该木马，相对于大型品牌的平板电脑，影响最大的是一些小众品牌的平板。据统计，超过4000台受影响的小众品牌平板已经被出售到全球各地。
+[![img](images/8-1618029323415.png)](http://www.wireghost.cn/2017/01/27/ROM安全梳理/8.png)其中最令人担心的是，这些平板电脑在许多电商平台都有出售，不乏零售巨头，如亚马逊。从当前的情况来看，显然大多数人都不知道cloudsota的潜在风险和破坏性，而在这里，必须提醒广大用户，可以说，这是一个定时炸弹，随时都有可能威胁个人隐私和财产安全。根据跟踪研究发现，目前有超过30个品牌的平板被预装了该木马，相对于大型品牌的平板电脑，影响最大的是一些小众品牌的平板。据统计，超过4000台受影响的小众品牌平板已经被出售到全球各地。
 [![img](images/9.png)](http://www.wireghost.cn/2017/01/27/ROM安全梳理/9.png)在遭受该木马感染的超过153个国家和地区中，美国、墨西哥和土耳其的情况是最为严重的。
 [![img](images/10.png)](http://www.wireghost.cn/2017/01/27/ROM安全梳理/10.png)我们可以在网上看到许多用户纷纷在亚马逊上评论，抱怨设备经常出现广告和弹窗。根据对收集到的信息进行统计，发现这些预装该木马的平板都有一定的相同之处，就是所有的这些平板，它们的价格都是比较廉价的，并且可以追溯到它们的制造商其实出自于一些不知名的小型车间。下面是一个不完整统计的在亚马逊上疑似预装木马的品牌列表：
-[![img](images/11.png)](http://www.wireghost.cn/2017/01/27/ROM安全梳理/11.png)
+[![img](images/11-1618029323415.png)](http://www.wireghost.cn/2017/01/27/ROM安全梳理/11.png)

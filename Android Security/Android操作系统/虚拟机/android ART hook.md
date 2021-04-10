@@ -497,7 +497,7 @@ END art_quick_call_entrypoint
 
 也就是art_quick_call_entrypoint恢复原来的堆栈，调用原始的entrypoint。但是，还有一个问题存在，也就是ART中关于延迟加载的问题。
 
-![img](https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif) LinkCode 源码
+LinkCode 源码
 
 在LinkCode() 的源码中可以看到这句代码：
 
