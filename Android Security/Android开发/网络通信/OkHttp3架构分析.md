@@ -4,7 +4,7 @@
 
 
 
-![img](https:////upload-images.jianshu.io/upload_images/3631399-0626631d246373a4.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp)
+![img](images/3631399-0626631d246373a4.png)
 
 Okhttp请求流程
 
@@ -16,7 +16,9 @@ Okhttp请求流程
 - 在异步请求中，我们通过Callback来获得简单清晰的请求回调(onFailure、onResponse)
 - 在OkHttpClient中，我们可以传入EventListener的工厂方法，为每一个请求创建一个EventListener，来接收非常细的事件回调
 
-![img](https:////upload-images.jianshu.io/upload_images/3631399-164b722ab35ae9bf.png?imageMogr2/auto-orient/strip|imageView2/2/w/432/format/webp)
+
+
+![img](images/3631399-164b722ab35ae9bf.png)
 
 完整interceptor-chain
 
@@ -52,7 +54,7 @@ okHttpClient.dispatcher().setMaxRequestsPerHost(10);
 - 通过两个双端队列来维护准备执行的任务和正在执行的任务：`Deque<AsyncCall> readyAsyncCalls`, `Deque<AsyncCall> runningAsyncCalls`；
 - 在每个任务结束时，都会检查 `readyAsyncCalls` 是否有任务，在条件满足的情况下，按照先进先出的原则将任务移动到 `runningAsyncCalls`中，并在线程池中执行；
 
-![img](https:////upload-images.jianshu.io/upload_images/3631399-23b0a64a1e0debf0.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp)
+![img](images/3631399-23b0a64a1e0debf0.png)
 
 异步请求线程池
 
@@ -104,7 +106,7 @@ void put(RealConnection connection) {
   }
 ```
 
-![img](https:////upload-images.jianshu.io/upload_images/3631399-c204b3416d3f8ac8.png?imageMogr2/auto-orient/strip|imageView2/2/w/992/format/webp)
+![img](images/3631399-c204b3416d3f8ac8.png)
 
 连接池清理线程池
 

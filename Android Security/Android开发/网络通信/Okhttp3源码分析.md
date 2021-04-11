@@ -4,7 +4,7 @@ url：https://www.jianshu.com/p/b0353ed71151
 
 在OkHttp3中，其灵活性很大程度上体现在可以 `intercept` 其任意一个环节，而这个优势便是okhttp3整个请求响应架构体系的精髓所在，先放出一张主框架请求流程图，接着再分析源码。
 
-![img](https:////upload-images.jianshu.io/upload_images/3631399-0626631d246373a4.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp)
+![img](images/3631399-0626631d246373a4.png)
 
 Okhttp请求流程
 
@@ -770,7 +770,7 @@ public Response intercept(Chain chain) throws IOException {
  ①一类是全局的 interceptor，该类 interceptor 在整个拦截器链中最早被调用，通过 OkHttpClient.Builder#addInterceptor(Interceptor) 传入；
  ②另外一类是非网页请求的 interceptor ，这类拦截器只会在非网页请求中被调用，并且是在组装完请求之后，真正发起网络请求前被调用，所有的 interceptor 被保存在 List<Interceptor> interceptors 集合中，按照添加顺序来逐个调用，具体可参考 RealCall#getResponseWithInterceptorChain() 方法。通过 OkHttpClient.Builder#addNetworkInterceptor(Interceptor) 传入；
 
-![img](https:////upload-images.jianshu.io/upload_images/3631399-164b722ab35ae9bf.png?imageMogr2/auto-orient/strip|imageView2/2/w/432/format/webp)
+![img](images/3631399-164b722ab35ae9bf.png)
 
 完整interceptor-chain
 

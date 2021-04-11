@@ -399,7 +399,7 @@ Accept-Ranges: bytes
 
 注意到一点是这个请求做了重定向，原始的 `request url` 是 `http://www.publicobject.com/helloworld.tx`，而响应的 `request url` 是 `https://publicobject.com/helloworld.txt`，这说明一定发生了重定向，但是做了几次重定向其实我们这里是不知道的，要知道这些的话，可以使用 `addNetworkInterceptor()`去做。更多的关于 `interceptor`的使用以及它们各自的优缺点，请移步OkHttp[官方说明文档](https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Fsquare%2Fokhttp%2Fwiki%2FInterceptors)。
 
-![img](https:////upload-images.jianshu.io/upload_images/3631399-164b722ab35ae9bf.png?imageMogr2/auto-orient/strip|imageView2/2/w/432/format/webp)
+![img](images/UZC%7BQGH6S$P7%25IWZ53%5DX26K.png)
 
 完整interceptor-chain
 
