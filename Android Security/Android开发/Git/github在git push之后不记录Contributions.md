@@ -155,3 +155,12 @@ user.name=zhangsan
 user.email=right_email@163.com
 ```
 
+
+
+
+
+可能配置完之后会不能push 或者不能pull
+
+可以用一下这个
+
+> git pull --rebase origin master
