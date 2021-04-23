@@ -1,5 +1,7 @@
 # Android JNI入门
 
+url：https://eternalsakura13.com/2018/02/07/jni/
+
 # JNI
 
 ## JNI引入
@@ -57,20 +59,17 @@
 ## 正常情况下的Android框架
 
 最顶层是Android的应用程序代码, 上层的应用层 和 应用框架层 主要是Java代码, 中间有一层的Framework框架层代码是 C/C++代码, 通过Framework进行系统调用, 调用底层的库 和linux 内核;
-[![img](https://ws2.sinaimg.cn/large/006tKfTcly1fo82wjl40oj30fd08xmxm.jpg)](https://ws2.sinaimg.cn/large/006tKfTcly1fo82wjl40oj30fd08xmxm.jpg)
 
 ## 使用JNI时的Android框架
 
 绕过Framework提供的调用底层的代码, 直接调用自己写的C代码, 该代码最终会编译成为一个库, 这个库通过JNI提供的一个Stable的ABI 调用linux kernel;ABI是二进制程序接口 application binary interface.
-[![img](https://ws2.sinaimg.cn/large/006tKfTcly1fo82ym8zujj30fe0ait99.jpg)](https://ws2.sinaimg.cn/large/006tKfTcly1fo82ym8zujj30fe0ait99.jpg)
 
 # JNI详解
 
 ## JNIEnv详解
 
 - JNIEnv作用 : JNIEnv 是一个指针,指向了一组JNI函数, 这些函数可以在jni.h中查询到,通过这些函数可以实现 Java层 与 JNI层的交互 , 通过JNIEnv 调用JNI函数 可以访问java虚拟机, 操作java对象;
-  [![img](https://ws1.sinaimg.cn/large/006tKfTcly1fo83l5gywfj30fb0b7myf.jpg)](https://ws1.sinaimg.cn/large/006tKfTcly1fo83l5gywfj30fb0b7myf.jpg)
-
+  
 - JNI线程相关性 : JNIEnv只在当前的线程有效,JNIEnv不能跨线程传递, 相同的Java线程调用本地方法, 所使用的JNIEnv是相同的, 一个Native方法不能被不同的Java线程调用;
 
 - JNIEnv结构体系 : JNIEnv指针指向一个线程相关的结构,线程相关结构指向一个指针数组,指针数组中的每个元素最终指向一个JNI函数.
@@ -257,8 +256,6 @@ public void helloFromJava(){
 ## Java中调用JNI
 
 ### JNI数据类型
-
-[![img](https://ws1.sinaimg.cn/large/006tKfTcly1fo89hw3cstj30pw0cewfe.jpg)](https://ws1.sinaimg.cn/large/006tKfTcly1fo89hw3cstj30pw0cewfe.jpg)
 数据类型表示方法 : int数组类型 jintArray , boolean数组 jbooleanArray …
 头文件定义类型 : 这些基本的数据类型在[jni.h](https://android.googlesource.com/platform/libnativehelper/+/brillo-m9-dev/include/nativehelper/jni.h) 中都有相应的定义 :
 
@@ -540,7 +537,6 @@ JNIEnv提供了众多的CallMethod和CallStaticMethod，还有CallNonvirtualMeth
 - CallMethod(jobject obj,jmethodID id,va_list lst);第二种是当调用这个函数的时候有一个指向参数表的va_list变量时使用的(很少使用)
 - CallMethod(jobject obj,jmethodID id,jvalue* v);第三种是当调用这个函数的时候有一个指向jvalue或jvalue数组的指针时用的
   jvalue在jni.h头文件中定义是一个union联合体，在C/C++中，我们知道union是可以存放不同类型的值，但是当你给其中一个类型赋值之后，这个union就是这种类型了，比如你给jvalue中的s赋值的话， jvalue就变成了jshort类型了，所以我们可以定义一个jvalue数组(这样就可以包含多种类型的参数了)传递到方法中。
-  [![img](https://ws2.sinaimg.cn/large/006tKfTcly1fo8b17xs19j305r05bwfa.jpg)](https://ws2.sinaimg.cn/large/006tKfTcly1fo8b17xs19j305r05bwfa.jpg)
 
 假如现在Java中有这样的一个方法:
 
