@@ -1,6 +1,6 @@
 # FART：ART环境下基于主动调用的自动化脱壳方案 
 
-# FART：ART环境下基于主动调用的自动化脱壳方案
+url：https://bbs.pediy.com/thread-252630.htm
 
 ## 一、App启动流程
 
