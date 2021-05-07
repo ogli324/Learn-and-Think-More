@@ -4,6 +4,7 @@ Live long and prosper.
 一个无情的网络安全文章搜集整合机器，目前主攻安卓逆向。
 
 ```
+$ tree -I "images|files|AUPK|img|Fart"
 .
 ├── Android Security
 │   ├── Android刷机
