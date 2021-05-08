@@ -5,8 +5,8 @@ Live long and prosper.
 
 ```
 $ date
-Sat May  8 10:50:45 CST 2021
-$ tree -I "images|files|AUPK|img|Fart"
+Sat May  8 14:56:04 CST 2021
+$ tree -I "images|files"
 .
 ├── Android Security
 │   ├── Android刷机
@@ -158,6 +158,23 @@ $ tree -I "images|files|AUPK|img|Fart"
 │   │   ├── 移动基带系统
 │   │   │   ├── 深度揭密高通45G移动基带消息系统和状态机.md
 │   │   │   └── 移动基带安全研究系列之一 概念和系统篇.md
+│   │   ├── 脱壳机制
+│   │   │   ├── AUPK：基于Art虚拟机的脱壳机.md
+│   │   │   ├── Android的ProxyDelegate Application框架.md
+│   │   │   ├── Android通用脱壳机FUPK3.md
+│   │   │   ├── Dalvik解释器源码到VMP分析 .md
+│   │   │   ├── FART：ART环境下基于主动调用的自动化脱壳方案 .md
+│   │   │   ├── Youpk 又一款基于ART的主动调用的脱壳机.md
+│   │   │   ├── fart的理解和分析过程.md
+│   │   │   ├── frida跟踪应用中所有运行在解释模式的java函数 .md
+│   │   │   ├── vmp入门.md
+│   │   │   ├── 使用frida hook解释器Interpreter.md
+│   │   │   ├── 使用frida来hook artmethod的RegisterNative.md
+│   │   │   ├── 对类抽取加固的一点尝试与遇到的问题.md
+│   │   │   ├── 将FART和Youpk结合来做一次针对函数抽取壳的全面提升.md
+│   │   │   ├── 拨云见日：安卓APP脱壳的本质以及如何快速发现ART下的脱壳点.md
+│   │   │   ├── 菜鸟学8.1版本dex加载流程笔记--第二篇DexFileOpen流程与简单脱壳原理.md
+│   │   │   └── 记录向：单纯使用Frida书写类抽取脱壳工具的一些心路历程和实践 .md
 │   │   └── 虚拟机
 │   │       ├── Android ART执行类方法的过程.md
 │   │       ├── Art 虚拟机代码加载简析.md
@@ -292,23 +309,6 @@ $ tree -I "images|files|AUPK|img|Fart"
 │   │       │   ├── fart脱壳机.md
 │   │       │   ├── frida常用脱壳脚本.md
 │   │       │   └── 类方法dump.md
-│   │       ├── 脱壳机
-│   │       │   └── 理论
-│   │       │       ├── AUPK：基于Art虚拟机的脱壳机.md
-│   │       │       ├── Android通用脱壳机FUPK3.md
-│   │       │       ├── Dalvik解释器源码到VMP分析 .md
-│   │       │       ├── FART：ART环境下基于主动调用的自动化脱壳方案 .md
-│   │       │       ├── Youpk 又一款基于ART的主动调用的脱壳机.md
-│   │       │       ├── fart的理解和分析过程.md
-│   │       │       ├── frida跟踪应用中所有运行在解释模式的java函数 .md
-│   │       │       ├── vmp入门.md
-│   │       │       ├── 使用frida hook解释器Interpreter.md
-│   │       │       ├── 使用frida来hook artmethod的RegisterNative.md
-│   │       │       ├── 对类抽取加固的一点尝试与遇到的问题.md
-│   │       │       ├── 将FART和Youpk结合来做一次针对函数抽取壳的全面提升.md
-│   │       │       ├── 拨云见日：安卓APP脱壳的本质以及如何快速发现ART下的脱壳点.md
-│   │       │       ├── 菜鸟学8.1版本dex加载流程笔记--第二篇DexFileOpen流程与简单脱壳原理.md
-│   │       │       └── 记录向：单纯使用Frida书写类抽取脱壳工具的一些心路历程和实践 .md
 │   │       ├── 腾讯壳
 │   │       │   └── 某类抽取加固APP的脱壳与修复.md
 │   │       ├── 迦娜加固
