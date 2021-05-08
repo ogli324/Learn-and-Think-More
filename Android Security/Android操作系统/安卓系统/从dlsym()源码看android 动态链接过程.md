@@ -12,10 +12,6 @@ url：https://www.cnblogs.com/lanrenxinxin/p/4965149.html
 
 android中关于elf文件，关于so文件信息的结构体：
 
-
-
-
-
 ```
 struct soinfo {
  public:
