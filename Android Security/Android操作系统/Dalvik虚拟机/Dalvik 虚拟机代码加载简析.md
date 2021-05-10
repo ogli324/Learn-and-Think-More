@@ -20,6 +20,4 @@ emm虽然好像现在Dalvik也不怎么用了
 
 art后续再更吧（逃
 
- 
-
-![Dalvik 虚拟机代码加载图](https://bbs.pediy.com/upload/attach/202102/882371_CZ97XY3UGH59ECK.jpg)
+![image-20210510101849775](images/image-20210510101849775.png)
